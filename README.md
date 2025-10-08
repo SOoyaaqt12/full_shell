@@ -5,10 +5,13 @@
 ![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Downloads](https://img.shields.io/github/downloads/SOoyaaqt12/full_shell/total?label=Downloads)
 
 **A feature-rich, cross-platform terminal shell with advanced capabilities**
 
 *Beautiful • Powerful • Developer-Friendly*
+
+**[⬇️ Download for Windows](https://github.com/SOoyaaqt12/full_shell/raw/main/output/DaffaShellInstaller.exe)** • [📖 Documentation](#-command-reference) • [🐛 Report Bug](https://github.com/SOoyaaqt12/full_shell/issues)
 
 </div>
 
@@ -48,18 +51,35 @@ Over 50+ built-in commands including file operations, system utilities, and deve
 
 ## 📦 Installation
 
-### Prerequisites
+### Option 1: Download Executable (Windows - Easiest!)
+
+**For Windows users**, you can download the pre-built executable directly:
+
+📥 **[Download DaffaShellInstaller.exe](https://github.com/SOoyaaqt12/full_shell/raw/main/output/DaffaShellInstaller.exe)**
+
+Or alternatively:
+1. Navigate to the [`output`](https://github.com/SOoyaaqt12/full_shell/tree/main/output) folder in this repository
+2. Click on `DaffaShellInstaller.exe`
+3. Click the "Download" button
+4. Run the executable - no Python installation required!
+5. Start using DaffaShell Pro immediately
+
+> **Note**: The executable is standalone and includes all dependencies. Windows may show a security warning on first run - this is normal for unsigned executables.
+
+### Option 2: Run from Source (Cross-Platform)
+
+#### Prerequisites
 
 - Python 3.6 or higher
 - pip (Python package installer)
 
-### Required Dependencies
+#### Required Dependencies
 
 ```bash
 pip install colorama
 ```
 
-### Optional Dependencies (Recommended)
+#### Optional Dependencies (Recommended)
 
 ```bash
 # For readline support on Windows
@@ -69,7 +89,7 @@ pip install pyreadline3
 pip install psutil
 ```
 
-### Quick Install
+#### Quick Install
 
 1. Clone the repository:
 ```bash
@@ -98,7 +118,13 @@ python full_shell.py
 
 ## 🚀 Quick Start
 
-### Basic Usage
+### Windows Users (Recommended)
+
+1. **[Download DaffaShellInstaller.exe](https://github.com/SOoyaaqt12/full_shell/raw/main/output/DaffaShellInstaller.exe)**
+2. Double-click to run (allow if Windows SmartScreen appears)
+3. Enjoy DaffaShell Pro! 🎉
+
+### All Platforms (Python)
 
 ```bash
 # Start the shell
@@ -409,10 +435,26 @@ Press `Tab` to auto-complete:
 
 ```
 full_shell/
-├── full_shell.py          # Main shell implementation
-├── README.md              # This file
-├── requirements.txt       # Python dependencies
-└── .daffashell_config.json # User configuration (auto-generated)
+├── full_shell.py              # Main shell implementation
+├── output/
+│   └── DaffaShellInstaller.exe # Pre-built Windows executable
+├── README.md                  # This file
+├── requirements.txt           # Python dependencies
+└── .daffashell_config.json    # User configuration (auto-generated)
+```
+
+### Building Executable
+
+To build your own executable using PyInstaller:
+
+```bash
+# Install PyInstaller
+pip install pyinstaller
+
+# Build executable
+pyinstaller --onefile --name DaffaShellInstaller full_shell.py
+
+# The executable will be in the dist/ folder
 ```
 
 ### Contributing
